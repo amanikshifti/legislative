@@ -1,0 +1,139 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-grid >
+            <ion-row >
+              <ion-col>
+      <ion-img src="../assets/image/a.png"  style="position:relative;width:30vmin;"></ion-img>    
+    </ion-col>
+      <ion-col   class="col text-right" >
+      <ion-text style="position:relative;top:1vmin;font-size:4vmin;
+      color:#083378;font-family: 'Cairo', sans-serif;margin-left:-2vmin;"> تفاصيل
+        &nbsp;
+        <ion-icon (click)="buttonretour() " style="position:relative;top:1vmin;font-size:5vmin;"  ios="ios-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+    </ion-text>
+    </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+  </ion-header> 
+
+<ion-content padding>
+    <br>
+    <div class="row row-center" *ngIf="photo != null">
+        <div class="col text-center">
+            <img alt="Logo" height="120vmin" width="120vmin"  class="circular--square"  [src]=photo  >
+        </div>
+    </div>
+      <div class="row row-center"  *ngIf="photo == null">
+          <div class="col text-center" >
+        <img   alt="Logo" height="150vmin" width="150vmin"  class="circular--square"  src="../assets/image/c.png">
+      </div>
+      </div>
+
+<br>
+<ion-grid class="col text-center" >
+  <ion-row  class="col text-center">
+      <ion-col><b style="font-family: 'Cairo', sans-serif;font-size:3vmin;color:#e1c007;"> الدائرة </b> </ion-col>
+      <ion-col ><b style="font-family: 'Cairo', sans-serif;font-size:3vmin; color:#e1c007;">العمر </b></ion-col>
+      <ion-col ><b style="font-family: 'Cairo', sans-serif;font-size:3vmin;color:#e1c007;">الاسم و اللقب</b></ion-col>
+    </ion-row>
+  <ion-row class="col text-center">
+      <ion-col class="grid-column" style="margin-left:-1px;">
+          <ion-text   color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">{{circonscription}}</ion-text>
+        </ion-col>
+<ion-col   class="grid-column" style="margin-left:-1px;">
+    <ion-text   color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">{{age}}</ion-text>
+  </ion-col>
+        <ion-col   class="grid-column" style="margin-right:1px;">
+          <ion-text   color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; margin-left:6vmin; direction: rtl;">{{nom}}</ion-text>
+        </ion-col>
+</ion-row>
+<br>
+<ion-row  class="col text-center">
+<ion-col><b style="font-family: 'Cairo', sans-serif;font-size:3vmin; color:#e1c007;"> القائمة </b> </ion-col>
+<ion-col ><b style="font-family: 'Cairo', sans-serif;font-size:3vmin; color:#e1c007;">الكتلة </b></ion-col>
+</ion-row>
+<ion-row class="col text-center">
+<ion-col class="grid-column" style="margin-left:-1px;">
+  <ion-text   color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">{{liste}} </ion-text>
+</ion-col>
+<ion-col   class="grid-column" style="margin-left:-1px;">
+<ion-text   color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">{{bloc}} </ion-text>
+</ion-col>
+</ion-row>
+<br>
+<ion-row class="col text-center" >
+    <ion-col  >
+        <ion-text  color="light" style="color:#e1c007;font-size:3vmin;font-family: 'Cairo', sans-serif; "><b>اللجنة القارة التشريعية </b></ion-text>
+      </ion-col>
+</ion-row>
+    <ion-row  class="col text-center" >
+        <ion-col  style="margin-right:-3vmin;" >
+            <ion-text color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">{{commission}} </ion-text>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row class="col text-center" >
+            <ion-col  >
+                <ion-text  color="light" style="color:#e1c007;font-size:3vmin;font-family: 'Cairo', sans-serif; "><b>اللجنة الخاصة الغير قارة</b></ion-text>
+              </ion-col>
+        </ion-row>
+            <ion-row  class="col text-center" >
+                <ion-col  style="margin-right:-3vmin;" >
+                    <ion-text color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; "> {{commissionSPT}}  </ion-text>
+                  </ion-col>
+                </ion-row>
+                <br>
+<ion-row class="col text-center" >
+    <ion-col  >
+        <ion-text  color="light" style="color:#e1c007;font-size:3vmin;font-family: 'Cairo', sans-serif; "><b>اللجنة الخاصة </b></ion-text>
+      </ion-col>
+</ion-row>
+    <ion-row  class="col text-center" >
+        <ion-col  style="margin-right:-3vmin;" >
+            <ion-text color="light" style="font-size:3vmin;font-family: 'Cairo', sans-serif; ">  {{commissionSP}} </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+    <ion-grid  >
+      <ion-row  class="parent-row">
+        <ion-col  class="col text-center" >
+            <ion-button  style="height:7vmin; font-family: 'Cairo', sans-serif;width:17vmax;"  shape="round" color="warning"    (click)="OpenManif()" ><ion-label color="primary"  style="font-size:3vmin;"><b>  البيان الانتخابي </b></ion-label></ion-button>
+        </ion-col>
+     
+        <ion-col class="col text-center" >
+    <ion-button  style="height:7vmin; font-family: 'Cairo', sans-serif;width:17vmax;"   shape="round" color="warning"   (click)="OpenCnx()" ><ion-label color="primary" style="font-size:3vmin;"><b> اضغط للاتصال</b></ion-label></ion-button>  
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
+    <br>
+</ion-content>
+
+  
+<ion-tab-bar slot="bottom"  color="warning">
+    <ion-tab-button routerLink="/resultat">
+      <ion-img class="labb" src="../assets/image/1a.png" color="primary"></ion-img>
+      <ion-label class="lab" color="primary">النتائج
+      </ion-label>
+    </ion-tab-button>
+  
+  <ion-tab-button routerLink="/liste">
+    <ion-img class="labb" src="../assets/image/2a.png" color="primary"></ion-img>
+  <ion-label class="lab" color="light">القائمات
+  </ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button  routerLink="/client">
+    <ion-img class="labb" src="../assets/image/3a.png" color="primary"></ion-img>
+  <ion-label class="lab" color="light">من نحن
+  </ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button  routerLink="/home">
+    <ion-img class="labb" src="../assets/image/4a.png" color="primary"></ion-img>
+    <ion-label class="lab" color="light">تشريعية 2019
+    </ion-label>
+  </ion-tab-button>
+  </ion-tab-bar>
+

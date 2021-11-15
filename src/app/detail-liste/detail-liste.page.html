@@ -1,0 +1,108 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-grid >
+            <ion-row >
+              <ion-col>
+      <ion-img src="../assets/image/a.png"  style="position:relative;width:30vmin;"></ion-img>    
+    </ion-col>
+      <ion-col   class="col text-right" >
+      <ion-text style="position:relative;top:1vmin;font-size:4vmin;
+      color:#083378;font-family: 'Cairo', sans-serif;margin-left:-2vmin;"> تفاصيل القائمة 
+        &nbsp;
+        <ion-icon  (click)= "buttonretour()"  style="position:relative;top:1vmin;font-size:5vmin;"  ios="ios-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+    </ion-text>
+    </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding  >
+    <br>
+<div class="row row-center" *ngIf="logo != null">
+    <div class="col text-center" >
+        <img alt="Logo" height="120vmin" width="120vmin"  class="circular--square"  [src]=logo  >
+    </div>
+</div>
+  <div class="row row-center"  *ngIf="logo == null">
+      <div class="col text-center" >
+    <img   alt="Logo" height="150vmin" width="150vmin"  class="circular--square"  src="../assets/image/c.png">
+  </div>
+  </div>
+
+  <div class="pos">
+    <ion-text class="chaine" color="light" ><h1 style="font-size:8vmin;">{{circonscription}}</h1></ion-text>
+    <ion-text class="chaine1"  color="warning"><h2 style="font-size:4vmin;">{{nomListe}} </h2></ion-text>
+  </div>
+
+<ion-grid  class="parent-row" style="position:relative;top:2%;">
+  <ion-row class="abc">
+<ion-col    class="parent-row" class="grid-column" style="margin-left:27px;">
+  <div >
+<ion-text  color="light"  style="font-size:3vmin;">عدد القائمة </ion-text>
+</div>
+  </ion-col>
+
+   <ion-col class="grid-column" style="margin-right:-1px;" >    
+   <ion-text   color="light" style="font-size:3vmin;"> نوع القائمة </ion-text>
+      </ion-col>
+
+    <ion-col class="grid-column" style="margin-right:25px;" >    
+    <ion-text  color="light" style="font-size:3vmin;"> رئيس القائمة </ion-text>
+      </ion-col>
+  </ion-row>
+    <ion-row  class="abc">
+<ion-col class="grid-column" style="margin-left:27px;">
+<ion-text    color="light"   style="font-size:3vmin;">{{numListe}} </ion-text>
+       </ion-col>
+      
+       <ion-col class="grid-column" style="margin-right:-1px;" >    
+          <ion-text  color="light"   style="font-size:3vmin;">{{typeListe}}</ion-text>
+       </ion-col> 
+    
+         <ion-col  class="grid-column" style="margin-right:25px;" >    
+          <ion-text   color="light"   style="font-size:3vmin;">{{presidentListe}}</ion-text>
+         </ion-col>
+      </ion-row>
+</ion-grid>
+<br>
+
+<ion-grid  style="position:relative;top:16%;">
+  <ion-row  class="parent-row">
+    <ion-col  class="col text-center" >
+        <ion-button  style="height:10vmin;"  class="btn1" shape="round" color="warning"    (click)="OpenManif()" ><ion-label color="primary"  style="font-size:3vmin;"><b> البيان الانتخابي</b></ion-label></ion-button>
+    </ion-col>
+ 
+    <ion-col class="col text-center" >
+<ion-button  style="height:10vmin;"  class="btn2"  shape="round" color="warning" (click)="OpenMembre()" ><ion-label color="primary" style="font-size:3vmin;"><b> رؤية القائمة</b></ion-label></ion-button>  
+    </ion-col>
+  </ion-row>
+</ion-grid> 
+<br>
+</ion-content>
+<ion-tab-bar slot="bottom"  color="warning">
+  <ion-tab-button routerLink="/resultat">
+    <ion-img class="labb" src="../assets/image/1a.png" color="primary"></ion-img>
+    <ion-label class="lab" color="light">النتائج
+    </ion-label>
+  </ion-tab-button>
+
+<ion-tab-button routerLink="/liste">
+  <ion-img class="labb" src="../assets/image/2a.png" color="primary"></ion-img>
+<ion-label class="lab"  color="primary">القائمات
+</ion-label>
+</ion-tab-button>
+
+<ion-tab-button  routerLink="/client">
+  <ion-img class="labb" src="../assets/image/3a.png" color="primary"></ion-img>
+<ion-label class="lab" color="light">من نحن
+</ion-label>
+</ion-tab-button>
+
+<ion-tab-button  routerLink="/home">
+  <ion-img class="labb" src="../assets/image/4a.png" color="primary"></ion-img>
+  <ion-label class="lab" color="light">تشريعية 2019
+  </ion-label>
+</ion-tab-button>
+</ion-tab-bar>
+

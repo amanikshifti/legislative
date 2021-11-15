@@ -1,0 +1,49 @@
+ion-content {
+  --background: url('../../assets/image/logo.png')no-repeat center center / cover;
+}
+
+.search {
+  position: absolute;
+  right:13vmin;
+    top:-0.1px;
+  font-size: 3vmin;
+  font-family: 'Cairo', sans-serif;
+}
+
+
+.lab {
+  top: 32px;
+  position: absolute;
+  font-family: 'Cairo', sans-serif;
+}
+.labb {
+  top: 10px;
+  position: absolute;
+}
+
+
+
+.legrid {
+  margin: 8% 5% 5% 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5%;
+}
+
+@media screen and (min-width:360px) and (max-width:480px){
+  .size1{display:initial  !important;}
+ .size2{display:none !important;}
+ .size3{display:none !important;}
+}
+
+@media screen and (width:320px){
+  .size1{display:none  !important;}
+ .size2{display:initial !important;}
+ .size3{display:none !important;}
+}
+
+@media screen and (min-width:600px) and (max-width:1024px){
+  .size1{display:none  !important;}
+ .size2{display:none !important;}
+ .size3{display:initial !important;}
+}

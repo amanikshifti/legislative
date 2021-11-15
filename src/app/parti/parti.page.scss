@@ -1,0 +1,107 @@
+ion-content {
+    --background: url('../../assets/image/logo.png') no-repeat center center / cover;
+}
+
+.welcome-card {
+    top: 9px;
+    position: relative;
+}
+
+.abc {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+}
+
+.search1 {
+    position: absolute;
+    right: 25px;
+    top: -3px;
+    font-size: 3vmin;
+    font-family: 'Cairo', sans-serif;
+}
+
+.grid-column {
+    border: 1px #e1c007 dashed;
+}
+
+.ph {
+    text-align: center;
+    top: 1vmin;
+    font-family: "Cairo", sans-serif;
+    color: #e1c007;
+    position: relative;
+    font-size: 4vmin;
+}
+
+.ph1 {
+    text-align: center;
+    top: 1vmin;
+    font-family: "Cairo", sans-serif;
+    color: #ffffff;
+    position: relative;
+    font-size: 3vmin;
+}
+
+.grid {
+    margin: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    margin-left: -2px;
+}
+
+.circular--square {
+    border-radius: 50%;
+}
+
+.lab {
+    top: 32px;
+    position: absolute;
+    font-family: 'Cairo', sans-serif;
+}
+
+.labb {
+    top: 10px;
+    position: absolute;
+}
+
+@media screen and (min-width:360px) and (max-width:845px) {
+    .size1 {
+        display: initial !important;
+    }
+    .size2 {
+        display: none !important;
+    }
+    .size3 {
+        display: none !important;
+    }
+}
+
+@media screen and (width:320px) {
+    .size1 {
+        display: none !important;
+    }
+    .size2 {
+        display: initial !important;
+    }
+    .size3 {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+    .size1 {
+        display: none !important;
+    }
+    .size2 {
+        display: none !important;
+    }
+    .size3 {
+        display: initial !important;
+    }
+}
+
+
+/* @media screen and (min-width:360px) and (max-width:845px) and (min-width:600px) and (max-width:1024px) {
+      .row{ display: none !important;}
+  }*/

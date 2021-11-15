@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-img src="../assets/image/a.png" style="position:relative;width:30vmin;"></ion-img>
+                </ion-col>
+                <ion-col class="col text-right">
+                    <ion-text style="position:relative;top:1vmin;font-size:4vmin;
+    color:#083378;font-family: 'Cairo', sans-serif;margin-left:-2vmin;"> اللجان &nbsp;
+                        <ion-icon routerLink="/resultat1" style="position:relative;top:1vmin;font-size:5vmin;" ios="ios-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+                    </ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="my-grid">
+        <ion-row class="parent-row">
+            <ion-col class="col text-center">
+
+                    <ion-button color="secondary" shape="round" routerLink="/poste" style="top:-15vmin;
+                    width:80vmin;
+                   height:8vmax;
+                   position:relative;
+                   font-family: 'Cairo', sans-serif;">
+                                       <ion-text color="light" style="font-size:3vmin;"><b>  مكتب  مجلس  نواب  الشعب</b></ion-text>
+                                   </ion-button>
+                                   <br>
+
+                                   <ion-button color="secondary" shape="round" routerLink="/detail-comi2" style="
+                                   width:80vmin;
+                                    height:8vmax;
+                                  position:relative;
+                                  font-family: 'Cairo', sans-serif;">
+                                                      <ion-text color="light" style="font-size:3vmin;"><b> اللجان القارة  التشريعية</b></ion-text>
+                                                  </ion-button>
+                                                  <br>
+
+                                                  <ion-button color="secondary" shape="round" routerLink="/detail-comi1" style="top:15vmin;
+                                                  position:relative;
+                                                   width:80vmin;
+                                                      height:8vmax;
+                                                  position:relative;
+                                                  font-family: 'Cairo', sans-serif;">
+                                                                      <ion-text color="light" style="font-size:3vmin;"><b> اللجان  الخاصة</b></ion-text>
+                                                                  </ion-button>
+                                                                  <br>
+                <ion-button full="small" shape="round" routerLink="/detail-comi" color="secondary" style="top:30vmin;
+    width:80vmin;
+    height:8vmax;
+    position:relative;
+   font-family: 'Cairo', sans-serif;">
+                    <ion-text color="light" style="font-size:3vmin;"><b> اللجان الخاصة غير القارة</b></ion-text>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="warning">
+    <ion-tab-button routerLink="/resultat">
+        <ion-img class="labb" src="../assets/image/1a.png" color="primary"></ion-img>
+        <ion-label class="lab" color="primary">النتائج
+        </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/liste">
+        <ion-img class="labb" src="../assets/image/2a.png" color="primary"></ion-img>
+        <ion-label class="lab" color="light">القائمات
+        </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/client">
+        <ion-img class="labb" src="../assets/image/3a.png" color="primary"></ion-img>
+        <ion-label class="lab" color="light">من نحن
+        </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/home">
+        <ion-img class="labb" src="../assets/image/4a.png" color="primary"></ion-img>
+        <ion-label class="lab" color="light">تشريعية 2019
+        </ion-label>
+    </ion-tab-button>
+</ion-tab-bar>

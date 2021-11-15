@@ -1,0 +1,90 @@
+ion-content {
+    --background: url('../../assets/image/logo.png')no-repeat center center / cover;
+}
+
+h1 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 50px;
+    color: rgb(225, 192, 7);
+    position: absolute;
+}
+
+
+.abc {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+}
+
+.grid-column {
+    border: 1px #e1c007 dashed;
+}
+
+.search1 {
+        position: absolute;
+        right: 25px;
+        top: -2vmin;
+        font-size: 3vmin;
+        font-family: 'Cairo', sans-serif;
+}
+
+.butn{
+    position:relative;
+    height:30px;
+    width:30vmin;
+    top:4vmin;
+}
+
+.lab {
+    top: 32px;
+    position: absolute;
+    font-family: 'Cairo', sans-serif;
+  }
+
+.labb {
+    top: 10px;
+    position: absolute;
+}
+
+
+.ph {
+    font-family: "Cairo", sans-serif;
+    color:  #e1c007;
+    top:200px;
+    font-size:15px;
+}
+
+.grid {
+    margin: 15% 5% 5% 5% ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1%;
+    margin-left:-2px;
+}
+
+.abcc {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.circular--square{
+    border-radius: 50%;
+}
+
+@media screen and (min-width:360px) and (max-width:480px){
+    .size1{display:initial  !important;}
+   .size2{display:none !important;}
+   .size3{display:none !important;}
+  }
+  
+  @media screen and (width:320px){
+    .size1{display:none  !important;}
+   .size2{display:initial !important;}
+   .size3{display:none !important;}
+  }
+  
+  @media screen and (min-width:600px) and (max-width:1024px){
+    .size1{display:none  !important;}
+   .size2{display:none !important;}
+   .size3{display:initial !important;}
+  }

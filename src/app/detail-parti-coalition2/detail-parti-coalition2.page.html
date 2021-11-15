@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-img src="../assets/image/a.png" style="position:relative;width:30vmin;"></ion-img>
+                </ion-col>
+                <ion-col class="col text-right">
+                    <ion-text style="position:relative;top:1vmin;font-size:4vmin;
+    color:#083378;font-family: 'Cairo', sans-serif;margin-left:-2vmin;">تفاصيل القائمة &nbsp;
+                        <ion-icon routerLink="/parti" style="position:relative;top:1vmin;font-size:5vmin;" ios="ios-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+                    </ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <h1 class="col text-center">قائمةائتلاف الرابطة الخضراء </h1>
+
+    <ion-grid class="col text-center" style="position:relative;top:25vmin;">
+        <ion-row class="col text-center">
+            <ion-col><b style="font-family: 'Cairo', sans-serif;font-size:3vmin;  color:#ffffff;margin-left:-13vmin;">التفاصيل</b> </ion-col>
+            <ion-col><b style="font-family: 'Cairo', sans-serif;font-size:3vmin;  color:#ffffff;margin-left:-5vmin;">الدائرة</b> </ion-col>
+            <ion-col><b style="font-family: 'Cairo', sans-serif;font-size:3vmin; color:#ffffff;"> الاسم واللقب</b></ion-col>
+        </ion-row>
+
+        <ion-row class="col text-center">
+            <div *ngFor="let eluCc  of eluCc">
+                <div *ngIf="(eluCc.id ==103)">
+                    <ion-button (click)="DetailsElu(eluCc)" class="row row-left" color="warning" style="position:relative;top:7px;height:4.5vmin;width:16vmin;" shape="round" [routerLink]="['/profil-coalition2']">
+                        <ion-label style="color:#083378; font-family: 'Cairo', sans-serif;font-size:3vmin; ">التفاصيل</ion-label>
+                    </ion-button>
+
+                </div>
+            </div>
+            <ion-col class="col text-right"><b style="font-family: 'Cairo', sans-serif;font-size:3vmin;  color:#ffffff;margin-left:3vmin;"> القيروان	</b> </ion-col>
+            <ion-col class="col text-right"><b style="font-family: 'Cairo', sans-serif;font-size:2.5vmin; color:#ffffff;">  صحبي صمارة
+ 	 </b></ion-col>
+        </ion-row>
+
+
+    </ion-grid>
+</ion-content>
